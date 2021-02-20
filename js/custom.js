@@ -6,6 +6,8 @@ const allP = document.querySelectorAll('.all');
 const fullP = document.querySelectorAll('.full');
 const frontP = document.querySelectorAll('.front');
 const backP = document.querySelectorAll('.back');
+const openSource = document.querySelectorAll('.open-source');
+const openSourceP = document.getElementById('open-source');
 
 all.addEventListener('click', function (e) {
   for (let i = 0; i < allP.length; i++) {
@@ -25,6 +27,9 @@ front.addEventListener('click', function (e) {
   for (let i = 0; i < backP.length; i++) {
     backP[i].classList.add('d-none', 'animate__zoomIn');
   }
+  for (let i = 0; i < openSource.length; i++) {
+    openSource[i].classList.add('d-none', 'animate__zoomIn');
+  }
 });
 
 back.addEventListener('click', function (e) {
@@ -38,6 +43,9 @@ back.addEventListener('click', function (e) {
   for (let i = 0; i < fullP.length; i++) {
     fullP[i].classList.add('d-none', 'animate__zoomIn');
   }
+  for (let i = 0; i < openSource.length; i++) {
+    openSource[i].classList.add('d-none', 'animate__zoomIn');
+  }
 });
 
 full.addEventListener('click', function (e) {
@@ -50,5 +58,24 @@ full.addEventListener('click', function (e) {
   }
   for (let i = 0; i < backP.length; i++) {
     backP[i].classList.add('d-none', 'animate__zoomIn');
+  }
+  for (let i = 0; i < openSource.length; i++) {
+    openSource[i].classList.add('d-none', 'animate__zoomIn');
+  }
+});
+
+openSourceP.addEventListener('click', function (e) {
+  for (let i = 0; i < openSource.length; i++) {
+    openSource[i].classList.remove('d-none');
+    openSource[i].classList.add('d-block', 'animate__zoomIn');
+  }
+  for (let i = 0; i < backP.length; i++) {
+    backP[i].classList.add('d-block', 'animate__zoomIn');
+  }
+  for (let i = 0; i < frontP.length; i++) {
+    frontP[i].classList.add('d-none', 'animate__zoomIn');
+  }
+  for (let i = 0; i < fullP.length; i++) {
+    fullP[i].classList.add('d-none', 'animate__zoomIn');
   }
 });
